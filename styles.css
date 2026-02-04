@@ -3,3 +3,39 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.title{
+    font-weight: bold;
+}
+
+/* Grid Wrapper */
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 50px 75px 1fr;
+    grid-template-areas: 
+        "nav header header"
+        "nav profile-menu profile-menu"
+        "nav main-content  side-content";
+}
+/* Navigation */
+.nav {
+    grid-area: nav;
+}
+/* Header */
+header{
+    grid-area: header;
+}
+/* Profile menu  */
+.profile-menu{
+    grid-area: profile-menu;
+}
+/* Content */
+.main-content {
+    grid-area: main-content;
+}
+
+/* Side content  */
+.side-content {
+    grid-area: side-content;
+}
