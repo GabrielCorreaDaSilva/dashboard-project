@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+body, html {
+    height: 100%;
+}
 
 .title{
     font-weight: bold;
@@ -12,8 +15,9 @@
 /* Grid Wrapper */
 .grid-wrapper {
     display: grid;
+    height: 100vh;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 50px 75px 1fr;
+    grid-template-rows: 60px 75px 1fr;
     grid-template-areas: 
         "nav header header"
         "nav profile-menu profile-menu"
@@ -43,7 +47,58 @@
 /* Header */
 header{
     grid-area: header;
+    margin: 0 50px;
+    display: grid;
+    grid-template-columns: 60px 5fr 60px 60px 2fr;
+    grid-template-rows: 60px;
+    place-items: center;
 }
+
+.search-icon {
+    height: 90%;
+    width: auto;
+}
+
+.notification-bell-icon {
+    height: 100%;
+    width: auto;
+}
+
+.search-button,
+.notification-bell-button{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 1.6rem;
+    width: auto;
+    background: transparent;
+    cursor: pointer;
+    border:none;
+}
+
+input[type="search"].search-bar {
+    appearance: none;
+    background-color: rgb(224, 227, 230);
+    border-radius: 12px;
+    border: none;
+    height: 30px;
+    width: max(200px, 90%);
+    justify-self: left;
+}
+
+.profile-miniature {
+    height: 42px;
+    width: auto;
+}
+
+header a,
+header a:visited{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.15rem;
+}
+
 /* Profile menu  */
 .profile-menu{
     grid-area: profile-menu;
