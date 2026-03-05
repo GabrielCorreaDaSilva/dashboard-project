@@ -7,6 +7,9 @@
 body, html {
     height: 100%;
 }
+:root {
+    --primary-blue: #1DA1F2;
+}
 
 .title{
     font-weight: bold;
@@ -18,6 +21,7 @@ body, html {
     height: 100vh;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 60px 75px 1fr;
+    gap: 16px;
     grid-template-areas: 
         "nav header header"
         "nav profile-menu profile-menu"
@@ -26,7 +30,7 @@ body, html {
 /* Navigation */
 .nav {
     grid-area: nav;
-    background-color: #1DA1F2;
+    background-color: var(--primary-blue);
     font-weight: bold;
     font-size: 1.45rem;
     color: white;
@@ -86,11 +90,6 @@ input[type="search"].search-bar {
     justify-self: left;
 }
 
-.profile-miniature {
-    height: 42px;
-    width: auto;
-}
-
 header a,
 header a:visited{
     text-decoration: none;
@@ -102,7 +101,52 @@ header a:visited{
 /* Profile menu  */
 .profile-menu{
     grid-area: profile-menu;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: 0 50px;
 }
+
+.welcome {
+    display: flex;
+    gap: 16px;
+}
+
+.welcome>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome>div>p {
+    font-weight: bold;
+}
+
+.welcome>div>p:first-child {
+    font-size: 0.9rem;
+}
+
+.welcome>div>p:last-child {
+    font-size: 1.5rem;
+}
+
+.profile-menu>.button-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-menu button {
+    height: 45px;
+    width: 100px;
+    background-color: var(--primary-blue);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 28px;
+}
+
+
 /* Content */
 .main-content {
     grid-area: main-content;
@@ -111,4 +155,15 @@ header a:visited{
 /* Side content  */
 .side-content {
     grid-area: side-content;
+}
+
+/*Profile pictures*/
+
+.profile-miniature {
+    height: 42px;
+    width: auto;
+}
+
+.profile-menu .profile-miniature {
+    height: 64px;
 }
