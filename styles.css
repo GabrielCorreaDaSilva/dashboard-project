@@ -9,6 +9,7 @@ body, html {
 }
 :root {
     --primary-blue: #1DA1F2;
+    --secondary-blue: rgb(221, 229, 238);
 }
 
 .title{
@@ -20,8 +21,7 @@ body, html {
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 60px 75px 1fr;
-    gap: 16px;
+    grid-template-rows: 75px 90px 1fr;
     grid-template-areas: 
         "nav header header"
         "nav profile-menu profile-menu"
@@ -51,30 +51,32 @@ body, html {
 /* Header */
 header{
     grid-area: header;
-    margin: 0 50px;
+    margin: 0px 50px;
     display: grid;
     grid-template-columns: 60px 5fr 60px 60px 2fr;
-    grid-template-rows: 60px;
+    grid-template-rows: 75px;
     place-items: center;
+    gap: 12px;
+
 }
 
 .search-icon {
-    height: 90%;
+    height: 40%;
     width: auto;
 }
 
 .notification-bell-icon {
-    height: 100%;
+    height: 48%;
     width: auto;
 }
 
 .search-button,
 .notification-bell-button{
     display: flex;
-    align-items: center;
-    justify-items: center;
-    height: 1.6rem;
-    width: auto;
+    place-items: center;
+    height: 60px;
+    width: 60px;
+    place-content: center;
     background: transparent;
     cursor: pointer;
     border:none;
@@ -82,10 +84,10 @@ header{
 
 input[type="search"].search-bar {
     appearance: none;
-    background-color: rgb(224, 227, 230);
+    background-color: var(--secondary-blue);
     border-radius: 12px;
     border: none;
-    height: 30px;
+    padding:8px 12px;
     width: max(200px, 90%);
     justify-self: left;
 }
@@ -96,6 +98,7 @@ header a:visited{
     color: black;
     font-weight: bold;
     font-size: 1.15rem;
+    place-content: center;
 }
 
 /* Profile menu  */
@@ -144,6 +147,7 @@ header a:visited{
     font-size: 1rem;
     border: none;
     border-radius: 28px;
+    cursor: pointer;
 }
 
 
@@ -161,7 +165,8 @@ header a:visited{
 
 .profile-miniature {
     height: 42px;
-    width: auto;
+    padding-top: 6px;
+    box-sizing:content-box;
 }
 
 .profile-menu .profile-miniature {
