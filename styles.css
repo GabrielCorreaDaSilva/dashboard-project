@@ -109,8 +109,6 @@ header a:visited{
     align-items: center;
     padding: 0 50px;
     background-color: white;
-    box-shadow: 0 4px 6px -3px rgba(0, 0, 0, 0.2);
-    z-index: 10;
 }
 
 .welcome {
@@ -220,6 +218,20 @@ header a:visited{
 .trending>div p:last-of-type {
     color: gray;
 }
+
+/*Shadows*/
+.profile-menu {
+    box-shadow: 0 4px 6px -3px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.side-content>article,
+.trending{
+    box-shadow: 2px 4px 6px -3px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
 
 /*Profile pictures*/
 
