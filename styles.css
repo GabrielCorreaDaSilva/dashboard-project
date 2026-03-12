@@ -107,7 +107,10 @@ header a:visited{
     display: flex;
     justify-content:space-between;
     align-items: center;
-    margin: 0 50px;
+    padding: 0 50px;
+    background-color: white;
+    box-shadow: 0 4px 6px -3px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
 .welcome {
@@ -154,11 +157,15 @@ header a:visited{
 /* Content */
 .main-content {
     grid-area: main-content;
+    background-color: var(--secondary-blue);
+    padding-top: 60px;
 }
 
 /* Side content  */
 .side-content {
     grid-area: side-content;
+    background-color: var(--secondary-blue);
+    padding-top: 60px;
 }
 
 /*Profile pictures*/
