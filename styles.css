@@ -70,8 +70,14 @@ body, html {
 .nav li {
     list-style: none;
     padding-bottom: 12px;
+    
+}
+
+.nav a {
     display: flex;
     gap: 22px;
+    color: white;
+    text-decoration: none;
 }
 
 /* Header */
