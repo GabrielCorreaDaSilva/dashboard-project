@@ -34,23 +34,45 @@ body, html {
     font-weight: bold;
     font-size: 1.35rem;
     color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 20px;
+}
+
+.nav .icon {
+    fill: white;
+    height: 24px;
+    width: 24px;
+}
+
+.nav>div>.icon{
+    height: 42px;
+    width: 42px;
 }
 
 .nav .logo {
     font-size: 1.6rem;
+    align-self: flex-end;
 }
 
 .nav ul,
-.nav .logo{
+.nav>div{
     margin-left: 20px;
-    padding: 12px 0 36px 0;
+    display: flex;
+    gap: 12px;
+}
+
+.nav ul {
+    flex-direction: column;
 }
 
 .nav li {
     list-style: none;
     padding-bottom: 12px;
+    display: flex;
+    gap: 22px;
 }
-
 
 /* Header */
 header{
