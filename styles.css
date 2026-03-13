@@ -8,7 +8,7 @@ body, html {
     height: 100%;
 }
 :root {
-    --primary-blue: #1DA1F2;
+    --primary-blue: #1992d4;
     --secondary-blue: rgb(221, 229, 238);
 }
 
@@ -32,8 +32,12 @@ body, html {
     grid-area: nav;
     background-color: var(--primary-blue);
     font-weight: bold;
-    font-size: 1.45rem;
+    font-size: 1.35rem;
     color: white;
+}
+
+.nav .logo {
+    font-size: 1.6rem;
 }
 
 .nav ul,
@@ -53,7 +57,7 @@ header{
     grid-area: header;
     margin: 0px 50px;
     display: grid;
-    grid-template-columns: 60px 5fr 60px 60px 2fr;
+    grid-template-columns: 60px 5fr 60px 60px 1fr;
     grid-template-rows: 75px;
     place-items: center;
     gap: 12px;
@@ -61,12 +65,12 @@ header{
 }
 
 .search-icon {
-    height: 40%;
+    height: 35%;
     width: auto;
 }
 
 .notification-bell-icon {
-    height: 48%;
+    height: 40%;
     width: auto;
 }
 
@@ -140,7 +144,7 @@ header a:visited{
 }
 
 .profile-menu button {
-    height: 45px;
+    height: 42px;
     width: 100px;
     background-color: var(--primary-blue);
     color: white;
